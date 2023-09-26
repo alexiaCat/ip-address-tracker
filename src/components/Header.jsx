@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 
 
 export const Header = ({ updateIpAddress }) => {
-  const [ipAddress, setIpAddress] = useState("192.212.174.101");
+  const [ipAddress, setIpAddress] = useState("");
   const ipRegex = /^(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)$/;
 
   const showAlert = () => {
@@ -34,11 +34,11 @@ export const Header = ({ updateIpAddress }) => {
   return (
     <div className="header w-screen h-[280px] flex flex-col items-center">
       <h1 className="font-rubik font-medium text-white text-[24px] md:text-[32px] py-[20px] text-center">IP address tracker</h1>
-      <div className="relative w-[90%] md:w-[80%] max-w-[29rem] flex">
+      <div className="relative w-[90%] md:w-[40%] flex">
         <input
           type="text"
           className="w-full h-full p-4 text-base font-rubik text-dark-gray font-normal border border-transparent rounded-l-[15px] placeholder-base placeholder-opacity-75 focus:outline-none focus:ring focus:ring-indigo-400"
-          placeholder="Buscar dirección IP o dominio"
+          placeholder="Search for any IP address or domain"
           value={ipAddress}
           onChange={handleInputChange}
         />
