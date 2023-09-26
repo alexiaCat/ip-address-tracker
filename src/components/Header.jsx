@@ -33,7 +33,7 @@ export const Header = ({ updateIpAddress }) => {
 
   return (
     <div className="header w-screen h-[280px] flex flex-col items-center">
-      <h1 className="font-rubik font-medium text-white text-[24px] md:text-[32px] py-[20px] text-center">IP address tracker</h1>
+      <h1 className="font-rubik font-medium text-white text-[24px] md:text-[32px] py-[20px] text-center">IP address Tracker</h1>
       <div className="relative w-[90%] md:w-[40%] flex">
         <input
           type="text"
