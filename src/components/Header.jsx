@@ -25,6 +25,7 @@ export const Header = ({ updateIpAddress }) => {
     e.preventDefault();
     if (ipRegex.test(ipAddress)) {
       updateIpAddress(ipAddress);
+      setIpAddress('');
     } else {
       showAlert();
     }
