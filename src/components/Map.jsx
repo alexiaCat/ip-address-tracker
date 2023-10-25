@@ -1,5 +1,5 @@
-import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import React, { useEffect } from 'react';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import IconLocation from '/images/icon-location.svg';
 
@@ -11,6 +11,16 @@ export const Map = ({ location }) => {
     const latitude = parseFloat(location.latitude);
     const longitude = parseFloat(location.longitude);
     const position = [latitude, longitude];
+
+    const MapComponent = () => {
+        const map = useMap();
+
+    useEffect(() => {
+        map.flyTo(position);
+    }, [position]);
+
+    return null;
+   };
 
     return (
         <MapContainer
@@ -31,6 +41,7 @@ export const Map = ({ location }) => {
                     </div>
                 </Popup>
             </Marker>
+            <MapComponent />
         </MapContainer>
     );
 }
